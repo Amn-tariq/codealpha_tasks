@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="heading">Add Tasks</h2>
+
+      <button id="toggleTheme">🌙</button>
+
+      <div class="down">
+        <input type="text" id="input" placeholder="Add a new task" />
+        <button id="addTask">Add</button>
+      </div>
+
+      <p id="emptyMessage">Please enter a task</p>
+
+      <ul id="list"></ul>
+
+      <p id="taskCount">Total tasks: 0</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

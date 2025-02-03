@@ -1,0 +1,156 @@
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  background: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: cornflowerblue;
+}
+
+#emptyMessage {
+  text-align: center;
+  color: gray;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  width: 100%;
+  max-height: 65vh;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+li {
+  background-color: white;
+  margin: 10px 0;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #888;
+  background-color: #f1f1f1;
+}
+
+.down {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 10px;
+
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#addTask {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: cornflowerblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#addTask:hover {
+  background-color: #0056b3;
+}
+
+button.remove {
+  background-color: #f44336;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button.remove:hover {
+  background-color: #d32f2f;
+}
+
+#taskCount {
+  font-size: 14px;
+  color: darkgray;
+  margin-top: 10px;
+}
+
+#toggleTheme {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  text-shadow: 0 3px 3px gray;
+}
+
+.dark {
+  background: #333;
+  color: white;
+}
+
+.dark .container {
+  background: #444;
+}
+
+.dark li {
+  background: #666;
+}
+
+.dark #emptyMessage {
+  color: lightgray;
+}
