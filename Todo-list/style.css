@@ -72,19 +72,48 @@ li.completed {
   background-color: #f1f1f1;
 }
 
+li.work {
+  border-left: 5px solid cornflowerblue;
+}
+
+li.personal {
+  border-left: 5px solid mediumseagreen;
+}
+
+li.urgent {
+  border-left: 5px solid tomato;
+}
+
+li.regular {
+  font-weight: normal;
+}
+
+li.temporary {
+  font-style: italic;
+}
+
+em {
+  color: #888;
+}
+
 .down {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
   bottom: 10px;
-
-  width: 90%;
-  max-width: 500px;
+  width: 100%;
+  max-width: fit-content;
+  color: #333 !important;
   background: #fff;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#category,
+#addTask {
+  margin: 20px;
 }
 
 #input {
@@ -121,16 +150,6 @@ button.remove {
   transition: 0.3s ease;
 }
 
-button.remove:hover {
-  background-color: #d32f2f;
-}
-
-#taskCount {
-  font-size: 14px;
-  color: darkgray;
-  margin-top: 10px;
-}
-
 #toggleTheme {
   background-color: transparent;
   border: none;
@@ -153,4 +172,24 @@ button.remove:hover {
 
 .dark #emptyMessage {
   color: lightgray;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .down {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #input {
+    margin-bottom: 10px;
+  }
+
+  #addTask {
+    width: 100%;
+  }
 }

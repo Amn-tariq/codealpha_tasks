@@ -13,18 +13,28 @@
   <body>
     <div class="container">
       <h2 class="heading">Add Tasks</h2>
-
       <button id="toggleTheme">🌙</button>
 
       <div class="down">
         <input type="text" id="input" placeholder="Add a new task" />
+        <select id="category">
+          <option value="Work">Work</option>
+          <option value="Personal">Personal</option>
+          <option value="Urgent">Urgent</option>
+        </select>
+        <label>
+          <input type="radio" name="taskType" value="Regular" checked />
+          Regular
+        </label>
+        <label>
+          <input type="radio" name="taskType" value="Temporary" />
+          Temporary
+        </label>
         <button id="addTask">Add</button>
       </div>
 
       <p id="emptyMessage">Please enter a task</p>
-
       <ul id="list"></ul>
-
       <p id="taskCount">Total tasks: 0</p>
     </div>
 

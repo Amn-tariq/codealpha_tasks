@@ -14,29 +14,28 @@ checkEmptyList();
 
 addTask.addEventListener("click", function () {
   const text = input.value.trim();
+  const category = document.getElementById("category").value;
+  const taskType = document.querySelector(
+    'input[name="taskType"]:checked'
+  ).value;
+
   if (text !== "") {
     const taskItem = document.createElement("li");
+    taskItem.classList.add(category.toLowerCase(), taskType.toLowerCase());
+
+    const taskDetails = document.createElement("div");
+    taskDetails.innerHTML = `<strong>${text}</strong> <em> ${taskType}</em>`;
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.style.marginRight = "10px";
-
-    const taskText = document.createElement("span");
-    taskText.textContent = text;
 
     const removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
     removeButton.classList.add("remove");
 
     checkbox.addEventListener("change", function () {
-      taskText.classList.toggle("completed", checkbox.checked);
-    });
-
-    taskText.addEventListener("click", function () {
-      const newText = prompt("Edit your task:", taskText.textContent);
-      if (newText) {
-        taskText.textContent = newText.trim();
-      }
+      taskDetails.classList.toggle("completed", checkbox.checked);
     });
 
     removeButton.addEventListener("click", function () {
@@ -45,7 +44,7 @@ addTask.addEventListener("click", function () {
     });
 
     taskItem.appendChild(checkbox);
-    taskItem.appendChild(taskText);
+    taskItem.appendChild(taskDetails);
     taskItem.appendChild(removeButton);
     list.appendChild(taskItem);
 
